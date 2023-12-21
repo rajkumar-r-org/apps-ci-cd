@@ -1,4 +1,4 @@
-name: Build and deploy JAVA app to Azure Web App - java-assignment2 - Rajkumar
+name: Java Build and deploy Assignment2
 
 on:
 #    pull_request:
