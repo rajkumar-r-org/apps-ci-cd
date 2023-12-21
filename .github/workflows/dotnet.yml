@@ -18,7 +18,7 @@ jobs:
     - name: CHDIR
       run: |
         pwd
-        cd ${{ github.workspace }}/dotnet-app/
+        cd ${{ github.workspace }}/dotnet-app/SampleWebApplication
         pwd
         ls -a
     - name: Setup .NET
