@@ -2,9 +2,9 @@ name: .NET Workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/app-deploy" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "feature/app-deploy" ]
   workflow_dispatch:  
 
 jobs:
