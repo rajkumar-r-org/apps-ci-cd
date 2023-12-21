@@ -5,9 +5,9 @@ on:
 #      types: [opened, synchronize, reopened, closed]
 #      branches:
 #        - 'feature/app-deploy'
-#    push:
-#      branches:
-#        - 'feature/app-deploy'
+    push:
+      branches:
+        - 'feature/app-deploy'
     workflow_dispatch:
 
 jobs:
