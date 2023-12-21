@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Changing to dotnet-app
-      run: cd dotnet-app
+      run: cd ${{ github.workspace }}/dotnet-app/
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
