@@ -18,15 +18,13 @@ jobs:
     - name: CHDIR
       run: |
         pwd
-        cd ${{ github.workspace }}/dotnet-app/SampleWebApplication/
-        pwd
         ls -a
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore ${{ github.workspace }}/dotnet-app/SampleWebApplication/
+      run: dotnet restore
       #working-directory: dotnet-app
     - name: Build
       run: dotnet build --no-restore
@@ -34,8 +32,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
       #working-directory: dotnet-app
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: artifact-file
-        path: ./dotnet-app/artifacts/
+    - name: list
+      run: |
+        ls -a
