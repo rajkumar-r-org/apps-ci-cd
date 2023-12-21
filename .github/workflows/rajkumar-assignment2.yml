@@ -17,6 +17,7 @@ jobs:
       azure-credentials: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ASSIGNMENT_1 }}
     with:
       java-version: '11'
+      pom-path: './java-app/pom.xml'
       app-name: 'rajkumar-assignmet1'
       package-path: './java-app/target/*.jar'
       artifact-name: 'java-app'
