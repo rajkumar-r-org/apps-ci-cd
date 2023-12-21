@@ -28,13 +28,13 @@ jobs:
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./publish
-      working-directory: dotnet-app
+      working-directory: ${{ github.workspace }}/dotnet-app
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: application
-        path: dotnet-app/publish
+        path: publish/*
 
     - name: Run
       run: dotnet run
@@ -52,6 +52,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: application
+          path: application
   
       - name: 'Deploy to Azure WebApp'
         id: deploy-to-webapp
