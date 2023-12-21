@@ -2,10 +2,11 @@ name: .NET Workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature/app-deploy" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "feature/app-deploy" ]
   workflow_dispatch:  
+
 
 jobs:
   build:
@@ -14,13 +15,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Changing to dotnet-app
-      run: cd ${{ github.workspace }}/dotnet-app/
-    - name: current directory
-      run: | 
-        pwd
-        echo "listing files under this path"
-        ls -a
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
