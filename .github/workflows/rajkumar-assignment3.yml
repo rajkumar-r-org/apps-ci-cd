@@ -28,13 +28,13 @@ jobs:
 
     - name: Publish
       run: dotnet publish --configuration Release --output ./publish
-      working-directory: ${{ github.workspace }}/dotnet-app
+      working-directory: dotnet-app
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: application
-        path: publish/*
+        path: dotnet-app/publish
 
     - name: Run
       run: dotnet run
